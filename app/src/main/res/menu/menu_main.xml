@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.b03navegacionfragmentada.MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="dosdam"
+        android:orderInCategory="1"
+        android:icon="@drawable/outline_2d_2_24"
+        android:title="Segundo DAM"
+        app:showAsAction="ifRoom|withText" />
+</menu>

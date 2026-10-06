@@ -28,4 +28,10 @@
         android:name="com.example.b005navigationdrower.ui.accessible.AccessibleFragment"
         android:label="@string/accessible"
         tools:layout="@layout/fragment_accessible" />
+
+    <fragment
+        android:id="@+id/nav_accessibility"
+        android:name="com.example.b005navigationdrower.ui.accessible.AccessibleFragment"
+        android:label="@string/accessibility"
+        tools:layout="@layout/fragment_accessibility" />
 </navigation>

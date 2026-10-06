@@ -18,7 +18,11 @@
             android:title="@string/menu_slideshow" />
         <item
             android:id="@+id/nav_accessible"
-            android:icon="@drawable/outline_accessible_menu_24"
+            android:icon="@drawable/outline_accessible_24"
             android:title="@string/accessible"/>
+        <item
+            android:id="@+id/nav_accessibility"
+            android:icon="@drawable/outline_accessibility_24"
+            android:title="@string/accessibility"/>
     </group>
 </menu>

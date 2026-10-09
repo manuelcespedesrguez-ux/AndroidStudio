@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">b08ImplicitIntent</string>
+    <string name="intento">9 Mi primer intent</string>
+    <string name="button">Mira un currante</string>
 </resources>

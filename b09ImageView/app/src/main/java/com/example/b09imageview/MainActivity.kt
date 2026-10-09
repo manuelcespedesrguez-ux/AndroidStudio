@@ -11,6 +11,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         this.enableEdgeToEdge()
@@ -34,8 +35,10 @@ class MainActivity : AppCompatActivity() {
             R.drawable.avatar_5,
             R.drawable.avatar_6,
             R.drawable.avatar_7,
+            R.drawable.osvaldo,
             R.drawable.avatar_8,
             R.drawable.avatar_9,
+            R.drawable.masho,
             R.drawable.avatar_10,
             R.drawable.avatar_11,
             R.drawable.avatar_12,

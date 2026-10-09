@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-<<<<<<< HEAD
-  <component name="ProjectRootManager" version="2">
-    <output url="file://$PROJECT_DIR$/out" />
-=======
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_25" default="true" project-jdk-name="jbr-25" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
@@ -17,6 +13,5 @@
         <option name="scale" value="0.21487304687499997" />
       </ProjectState>
     </option>
->>>>>>> 3563083c5b43009ce587dd2f1c5d83d8beba91fd
   </component>
 </project>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">b10AcivitySwitcher</string>
+    <string name="textview1">10 Switcher</string>
+    <string name="textview4">TextView</string>
+    <string name="button">JUMP #1</string>
+    <string name="textview2">This is activity no 2</string>
+    <string name="textview3">Pulsa para sumar los dos números</string>
+</resources>

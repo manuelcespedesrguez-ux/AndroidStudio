@@ -1,8 +1,14 @@
 <resources>
     <string name="app_name">b10AcivitySwitcher</string>
     <string name="textview1">10 Switcher</string>
-    <string name="textview4">TextView</string>
-    <string name="button">JUMP #1</string>
-    <string name="textview2">This is activity no 2</string>
-    <string name="textview3">Pulsa para sumar los dos números</string>
+    <string name="textview1_1">this is activity no 1</string>
+    <string name="button1">JUMP #2</string>
+    <string name="number1_1">0</string>
+    <string name="number1_2">0</string>
+    <string name="textview1_3">Suma</string>
+    <string name="textview2_1">10 Switcher</string>>
+    <string name="button2">JUMP #1</string>
+    <string name="textview2_2">This is activity no 2</string>
+    <string name="textview2_3">Pulsa para sumar los dos números</string>
+    <string name="textview2_4">TextView</string>
 </resources>

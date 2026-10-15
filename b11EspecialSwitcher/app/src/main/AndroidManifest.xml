@@ -13,14 +13,15 @@
         android:theme="@style/Theme.B11EspecialSwitcher">
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustResize">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SecondActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

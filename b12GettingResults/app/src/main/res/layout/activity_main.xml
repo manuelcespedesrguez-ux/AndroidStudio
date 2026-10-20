@@ -5,64 +5,67 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/Cian">
 
     <TextView
-        android:id="@+id/hello"
+        android:id="@+id/Hello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tittle"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="40sp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.199" />
+        android:layout_marginTop="100dp"/>
 
     <EditText
         android:id="@+id/fecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        android:layout_marginTop="50dp"
+        android:hint="@string/hint1"
+        android:textSize="25sp"
+        android:textColorHint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/Hello"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/hello" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="date"/>
 
     <EditText
-        android:id="@+id/tiempo"
+        android:id="@+id/Tiempo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        android:layout_marginTop="50dp"
+        android:hint="@string/hint2"
+        android:textSize="25sp"
+        android:textColorHint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/fecha"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fecha" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:inputType="time"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/Enviar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
         android:text="@string/button"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/Tiempo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tiempo" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"/>
 
     <TextView
-        android:id="@+id/resultado"
+        android:id="@+id/Resultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/Enviar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/button" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

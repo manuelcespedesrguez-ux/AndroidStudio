@@ -2,5 +2,9 @@
     <string name="app_name">b12GettingResults</string>
     <string name="tittle">B12 Getting Results</string>
     <string name="button">Tócame</string>
-
+    <string name="textview2">Fusión de cadenas</string>
+    <string name="textview3">Fecha</string>
+    <string name="textview4">Hora</string>
+    <string name="button2">Concatenar</string>
+    <string name="textview5">Cadena de registro</string>
 </resources>

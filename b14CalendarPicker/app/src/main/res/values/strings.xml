@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">b14CalendarPicker</string>
+    <string name="texto1">B14 Calendar Picker</string>
+    <string name="texto2">--/--/----</string>
+    <string name="button">SETEAR FECHA</string>
 </resources>

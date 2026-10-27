@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">b09ImageView</string>
+    <string name="textView">9. Image View</string>
+    <string name="button">Toca para cambiar</string>
+    <string name="imagen">Imagen</string>
+</resources>

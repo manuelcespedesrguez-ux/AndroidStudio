@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">b15TimePicker</string>
+    <string name="text1">B15 Time picker</string>
+    <string name="text2">hh : mm</string>
+    <string name="text3">Set time</string>
+</resources>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">b16ReciclerView</string>
+    <string name="text1">B16 Recicler View</string>
+    <string name="text2">Introduce un país</string>
+    <string name="button">Agregar</string>
+</resources>

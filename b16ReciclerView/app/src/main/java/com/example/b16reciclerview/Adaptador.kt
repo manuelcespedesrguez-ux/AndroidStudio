@@ -1,27 +1,29 @@
-package com.example.b16reciclerview
+package com.example.b16ReciclerView
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.b16reciclerview.R
 
-class PaisAdapter(
+class Adaptador(
     private val listaPaises: MutableList<String>,
     private val onItemClick: (Int) -> Unit
-) : RecyclerView.Adapter<PaisAdapter.PaisViewHolder>() {
+) : RecyclerView.Adapter<Adaptador.PaisesVista>() {
 
-    class PaisViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class PaisesVista(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        // ID actualizado según item_pais.xml
         val textView: TextView = itemView.findViewById(R.id.textPais)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PaisViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_pais, parent, false)
-        return PaisViewHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PaisesVista {
+        // Layout inflado actualizado a item_pais
+        val vista = LayoutInflater.from(parent.context).inflate(R.layout.item_pais, parent, false)
+        return PaisesVista(vista)
     }
 
-    override fun onBindViewHolder(holder: PaisViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: PaisesVista, position: Int) {
         holder.textView.text = listaPaises[position]
 
         holder.itemView.setOnClickListener {

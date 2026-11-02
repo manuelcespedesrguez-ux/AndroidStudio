@@ -21,9 +21,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!--
-        Como en el video del profe: el alto se ajusta al contenido (wrap_content)
-        hasta un máximo. Si hay más países de los que caben, se hace scroll dentro.
-        constrainedHeight evita que se salga por abajo y bias 0 lo pega arriba.
+        El alto se ajusta al contenido (wrap_content) hasta un máximo.
+        Si hay más elementos, se habilita el scroll interno de forma limpia.
     -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">b13StateSaver</string>
+    <string name="teto">B14 State Saver</string>
+    <string name="edito">Texto</string>
+    <string name="button">Contar</string>
+    <string name="teto2">Contador</string>
+</resources>

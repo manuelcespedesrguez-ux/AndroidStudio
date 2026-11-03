@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">b11EspecialSwitcher</string>
+    <string name="textview1_1">b11 Especial Switcher</string>
+    <string name="edittext1_1">Introduce los Galones a convertir</string>
+    <string name="edittext1_2">Introduce las pintas a convertir (máx. 7)</string>
+    <string name="button1_1">JUMP #2</string>
+    <string name="textview1_2">Resultado:</string>
+
+    <string name="textview2_1">b11 Especial Switcher</string>
+    <string name="button2_1">Convertir</string>
+    <string name="textview2_2">El resultado aparece aquí</string>
+    <string name="button2_2">JUMP #1</string>
+</resources>

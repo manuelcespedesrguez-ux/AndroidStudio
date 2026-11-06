@@ -23,3 +23,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "b18FutbolSpinner"
+include(":app")
+ 

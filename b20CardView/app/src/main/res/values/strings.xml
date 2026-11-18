@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">b20CardView</string>
+    <string name="title">B20 Recycler de animes con CardView</string>
+    <string name="button">AGREGAR</string>
+</resources>

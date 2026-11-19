@@ -24,4 +24,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "b20CardView"
 include(":app")
- 

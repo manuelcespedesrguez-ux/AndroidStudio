@@ -54,7 +54,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
             android:src="@android:drawable/ic_menu_share"
-            android:background="#455A64" />
+            android:background="@color/material_blue_grey_800" />
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

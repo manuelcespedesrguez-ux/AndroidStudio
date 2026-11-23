@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">a18ReciclerView</string>
+    <string name="titulo">Recycler View</string>
+    <string name="editext">Introduce el nombre que quieras agregar o eliminar</string>
+    <string name="boton">Agregar</string>
+    <string name="botonEliminar">Eliminar de la lista</string>
+</resources>

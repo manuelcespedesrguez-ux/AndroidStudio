@@ -3,6 +3,7 @@ package com.example.b20cardview
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -10,32 +11,17 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-/*
-    TODO
-
-    -¿PARA QUE SIRVE Y POR QUE SE CREA? -> Controla la pantalla principal y une todas las piezas anteriores. Se crea como punto de arranque visual e interaccion con el usuario
-
-    -PARTES CLAVE -> El metodo onCreate, la configuracion del RecyclerView( asignandole un LinearLayout y el AnimeAdapter) y el evento setOnClickListener del boton
-
-    -EJEMPLO SENCILLO -> Es el jefe de la obra que reune los materiales (DataRepository), al trabajador(AnimeAdapter) y el espacio fisico (RecyclerView) para que todo funcione.
-*/
-
 class MainActivity : AppCompatActivity() {
-    private var recycler: RecyclerView? = null // ? Variable global para controlar el RecyclerView
-    private var adapter: AnimeAdapter? = null // ? Variable global para guardar el adaptador
-    private var lManager: RecyclerView.LayoutManager? = null // ? Varaible global para definir como se organizan las tarjetas
-    private var repositorio: DataRepository? = null // ? Variable global para acceder al almacen de datos
+    private var recycler: RecyclerView? = null
+    private var adapter: AnimeAdapter? = null
+    private var lManager: RecyclerView.LayoutManager? = null
+    private var repositorio: DataRepository? = null
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        this.enableEdgeToEdge()
+        setContentView(R.layout.activity_main)
 
-    override fun onCreate(savedInstanceState: Bundle?) { // ? Primer metodo del ciclo de vida que se ejecuta al abrir la pantalla
-
-        super.onCreate(savedInstanceState) // ? Ejecuta la inicializacion interna obligatoria de Android
-
-        this.enableEdgeToEdge()// ? Extiende el diseño de la app a pantalla completa (por detras de las barras del sistema)
-
-        setContentView(R.layout.activity_main) // ?  Carga la interfaz visual definida
-
-        // ? Añade margenes internos dinamicos al contenedor princial para que la barra de notificaciones o los botones del telefono no tapen la app
         ViewCompat.setOnApplyWindowInsetsListener(
             findViewById(R.id.main)
         ) { v: View, insets: WindowInsetsCompat ->
@@ -44,30 +30,28 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        recycler = findViewById(R.id.recyclerView) // ? Localiza el RecyclerView en el diseño XML y lo guarda en la variable
+        recycler = findViewById(R.id.recyclerView)
+        recycler?.setHasFixedSize(true)
+        lManager = LinearLayoutManager(this)
+        recycler?.layoutManager = lManager
 
-        recycler?.setHasFixedSize(true) // ? Mejora el rendimiento indicando que el contenedor de la lista mantendra un tamaño fijo en pantalla
+        repositorio = DataRepository()
 
-        lManager = LinearLayoutManager(this) // ? Configura una distribucion lineal vertical(una tarjeta debajo de la otra)
+        // Referencia al nuevo TextView del activity_main.xml
+        val tvSeleccionado = findViewById<TextView>(R.id.tvAnimeSeleccionado)
 
-        recycler?.layoutManager = lManager // ? Asigna esa distribucion vertical al RecyclerView
+        // Inicialización del adaptador con la acción del clic corto
+        val animeAdapter = AnimeAdapter(repositorio!!.obtenerListaAnimes()) { anime ->
+            tvSeleccionado.text = anime.nombre
+        }
 
-        repositorio = DataRepository() // ? Crea el repositorio, ejecutando su init y cargando los 5 animes iniciales
+        adapter = animeAdapter
+        recycler?.adapter = adapter
 
-        val animeAdapter = AnimeAdapter(repositorio!!.obtenerListaAnimes()) // ? Crea el adaptador entregandole la lista del repositorio ("!!" fuerza a Kotlin a tratarla como no nula)
+        // Botón para agregar un anime aleatorio con datos reales
+        val btnAgregar = findViewById<Button>(R.id.button)
 
-        adapter = animeAdapter // ? Guarda la referencia del adaptador en al variable global.
-
-        recycler?.adapter = adapter // ? Conecta el adaptador con el RecyclerView para que empiece a pintar las tarjetas
-
-        // !_________________________________________________________________________________________________________________________
-        // ! METODO PARA AGREGAR ELEMENTOS A LA LISTA
-
-        val btnAgregar = findViewById<Button>(R.id.button) // ? Localiza el boton en el XML
-
-        btnAgregar.setOnClickListener { // ? Escucha el evento de clic sobre el boton
-
-            // ? Lista con los animes disponibles para elegir uno al azar
+        btnAgregar.setOnClickListener {
             val listaBase = listOf(
                 Anime(R.drawable.angel, "Angel Beats", 230),
                 Anime(R.drawable.death, "Death Note", 456),
@@ -76,11 +60,9 @@ class MainActivity : AppCompatActivity() {
                 Anime(R.drawable.suzumiya, "Suzumiya Haruhi", 459)
             )
 
-            val nuevoAnime = listaBase.random() // ? Elige un anime aleatorio de la lista
-
-            animeAdapter.addAnime(nuevoAnime) // ? Añade ese anime al adaptador y actualiza la lista
-
-            recycler?.scrollToPosition(animeAdapter.itemCount - 1) // ? Desplaza el scroll hasta el final
+            val nuevoAnime = listaBase.random()
+            animeAdapter.addAnime(nuevoAnime)
+            recycler?.scrollToPosition(animeAdapter.itemCount - 1)
         }
-    } // <-- Llave de cierre de onCreate
-} // <-- Llave de cierre de MainActivity
+    }
+}

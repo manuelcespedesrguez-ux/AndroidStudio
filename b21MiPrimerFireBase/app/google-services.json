@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "536535738077",
+    "project_id": "b21miprimerfirebase",
+    "storage_bucket": "b21miprimerfirebase.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536535738077:android:10e2c127156d0291821d34",
+        "android_client_info": {
+          "package_name": "com.example.b21miprimerfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC137ayDkvva1QMserEKbdqSmcOoIx5yVo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
